@@ -1,0 +1,15 @@
+{
+    "manifest_version": 2,
+    "name": "Kiosk display blocker",
+    "version": "1.0",
+    "description": "This extension disables right click and text selection. It's intended to be used in kiosk chrome browsers.",
+
+    "content_scripts": [
+      {
+        "matches": ["<all_urls>"],
+        "js": ["contextblocker.js"],
+        "all_frames": true,
+        "match_about_blank": true
+      }
+    ]
+}
